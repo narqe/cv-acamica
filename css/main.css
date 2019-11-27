@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+}
+
+html, body {
+    width: 100%;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    scroll-behavior: smooth;
+}
+
+hr {
+    border: 0.5px solid #f3f3f3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alegreya Sans';
+}
+
+figcaption {    
+    font-family: 'Open Sans';
+    font-size: 12px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+figure.habilidades img {
+    margin: 0 auto;
+    display: block;
+}
+figure.habilidades {
+    margin: 0 auto;
+    padding: 0 20px 0 0;
+}
+
+a {
+    color: #e9af8b;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #e9af8b;
+}
+
+/*.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}*/
+
+.contenedor {
+    width: 100%;
+    display: block;
+    justify-content: center;
+}
+
+/*css para la vista en desktop o pantalla grande */
+.contenedor-izq {
+    color: #FFF;
+    min-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contenedor-izq__menu {
+    padding-top: 20px;
+    background: #e9af8b;
+    position: fixed;
+    height: 100vh;
+}
+
+.contenedor-der {
+    display: inline-block;
+    width: calc(100% - 400px);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*css para pantallas hasta 720px de ancho*/
+@media only screen and (max-width: 1024px) {
+    .contenedor {        
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+
+    .contenedor-izq, .contenedor-der {
+        width: 100%;
+    }
+
+    .contenedor-izq .contenedor-izq__menu {
+        position: relative;
+        height: 100%;
+    }
+
+    h1 {
+        margin: 0;
+    }
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    text-transform: uppercase;
+    line-height: 2;
+}
+
+.nombre {
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 10px 0 80px 0;
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+
+.nombre > span {
+    color: #d48150;
+    font-weight: bold;
+}
+
+.contenedor-der .contenedor-der__list-quiensoy {
+    padding-bottom: 100px; 
+    padding-top: 50px; 
+}
+
+.contenedor-der .contenedor-der__list-quiensoy li {
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contenedor-izq .contenedor-izq__list-nav {
+    display: block;
+}
+
+.contenedor-izq .contenedor-izq__list-nav li {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+    font-family: 'Alegreya Sans';
+    line-height: 1.3;
+    position: relative;
+    z-index: 2;
+    margin: 2px 15px;
+}
+
+.contenedor-izq .contenedor-izq__list-nav li a {
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 1.7px;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+    -webkit-transition: all 400ms linear 0s;
+    -o-transition: all 400ms linear 0s;
+    transition: all 400ms linear 0s;
+}
+
+.contenedor-izq .contenedor-izq__list-nav li a::before {
+    content: "";
+    width: 0%;
+    transition: width .5s ease-in;
+    display: block;
+}
+
+.contenedor-izq .contenedor-izq__list-nav li:hover a::before {
+    content: "";
+    height: 10px;
+    bottom: 0px;
+    left: 0;
+    z-index: -1;
+    background: #d48150;
+    width: 90%;
+    display: block;
+    position: absolute;
+}
+
+figure.foto-cv {
+    padding: 0;
+}
+figure.foto-cv img {
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+.contenedor-der  h2 {    
+    font-size: 35px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+    font-family: 'Alegreya Sans';
+    line-height: 2;
+    letter-spacing: 1.7px;
+    position: relative;
+    z-index: 2;
+    color: #000;    
+    text-shadow: 1px 1px #FFF;
+    margin: 10px 0;
+}
+
+.contenedor-der  h2::after {
+    content: "";
+    height: 20px;
+    bottom: 15px;
+    left: 0;
+    z-index: -1;
+    background: #e9af8b;
+    display: block;
+    position: absolute;
+    width: -webkit-fill-available;
+}
+
+figure.idiomas {
+    padding: 0;
+    margin: 0 10px 0 0;
+    display: -webkit-inline-box;
+    position: relative;
+    height: 20px;
+}
+
+.contenedor-der .contenedor-der__list-habilidades {
+    padding: 10px 0px;
+}
+
+.contenedor-der .contenedor-der__list-idiomas li {
+    line-height: 3;
+}
+
+.contenedor-der .contenedor-der__list-experiencia, 
+.contenedor-der .contenedor-der__list-formacion, 
+.contenedor-der .contenedor-der__list-contacto, 
+.contenedor-der .contenedor-der__list-datos{
+    position: relative;
+}
+
+.contenedor-der .contenedor-der__list-experiencia::after, 
+.contenedor-der .contenedor-der__list-formacion::after, 
+.contenedor-der .contenedor-der__list-contacto::after, 
+.contenedor-der .contenedor-der__list-datos::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #e9af8b;
+    top: 0;
+    left: 4px;
+    margin-left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.contenedor-der__list-experiencia li::before, 
+.contenedor-der__list-formacion li::before, 
+.contenedor-der__list-contacto li::before, 
+.contenedor-der__list-datos li::before{
+    content: "•";
+    color: #e9af8b;
+    display: inline-block;
+    font-size: 25px;
+    margin: 0 20px 0 0;
+    font-style: normal;
+    font-weight: bold;
+} 
+
+.contenedor-der__list-links li, 
+.contenedor-der__list-habilidades li{
+    display: inline-block;
+}
+
+a.behance, a.linkedin {    
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+}
+
+a.behance {
+    background: url('../img/iconos/behance.png') center center no-repeat;
+}
+
+a.linkedin {
+    background: url('../img/iconos/linkedin.png') center center no-repeat;
+}
+
+p.text-quiensoy {
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 13px;
+    background: #fff8f4;
+    padding: 30px 40px;
+    border: 2px dashed #d48150;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.1);
+		transform: translatey(-5px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(0px);
+	}
+}
